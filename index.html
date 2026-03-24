@@ -9,7 +9,26 @@
 :root{--white:#ffffff;--off-white:#f8faf7;--cream:#f2f7f0;--gp:#e8f5e2;--gl:#c8e6c0;--gm:#4caf50;--gd:#2e7d32;--gdark:#1b5e20;--gf:#0d3b12;--gold:#c49a2a;--goldl:#e8c96a;--td:#0d1f0f;--tm:#2d4a2f;--ts:#5a7a5c;--sh:rgba(13,59,18,0.12);--shd:rgba(13,59,18,0.22)}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--td);overflow-x:hidden}
 #loader{position:fixed;inset:0;z-index:9999;background:var(--gf);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;transition:opacity .8s,visibility .8s}
-#loader.gone{opacity:0;visibility:hidden}.ll{font-size:3rem;animation:spin 1.5s ease-in-out infinite}
+#loader.gone{opacity:0;visibility:hidden.ll{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.loader-logo{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:contain;
+  background:white;
+  padding:10px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+  animation:spin 1.5s ease-in-out infinite;
+}
+
+#loader{
+  text-align:center;
+}
 @keyframes spin{0%,100%{transform:rotate(-20deg) scale(1)}50%{transform:rotate(20deg) scale(1.2)}}
 .lt{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gl);letter-spacing:.3em;text-transform:uppercase}
 .lb{width:200px;height:2px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}.lf{height:100%;background:var(--gold);animation:fill 2s ease forwards}
@@ -438,17 +457,6 @@ function sendMsg(){const i=document.getElementById('cin');const t=i.value.trim()
 function sendQ(t){addMsg(t,'u');setTimeout(()=>addMsg(getR(t),'b'),500)}
 function submitForm(e){e.preventDefault();alert('Thank you for your enquiry!\n\nWe will contact you within 24 hours.\n\nFor urgent queries:\nCall: +91 70034 40023\nEmail: sales@aardevolution.in');e.target.reset()}
 
-.loader-logo{
-  width:70px;   /* control size here */
-  height:70px;
-  border-radius:50%;
-  object-fit:contain;  /* important fix */
-  background:white;
-  padding:6px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.25);
-  animation:spin 1.5s ease-in-out infinite;
-}
-  
 </script>
 </body>
 </html>
