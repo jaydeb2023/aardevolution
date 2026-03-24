@@ -437,6 +437,18 @@ function addMsg(t,tp){const c=document.getElementById('cm');const d=document.cre
 function sendMsg(){const i=document.getElementById('cin');const t=i.value.trim();if(!t)return;addMsg(t,'u');i.value='';setTimeout(()=>addMsg(getR(t),'b'),600)}
 function sendQ(t){addMsg(t,'u');setTimeout(()=>addMsg(getR(t),'b'),500)}
 function submitForm(e){e.preventDefault();alert('Thank you for your enquiry!\n\nWe will contact you within 24 hours.\n\nFor urgent queries:\nCall: +91 70034 40023\nEmail: sales@aardevolution.in');e.target.reset()}
+
+.loader-logo{
+  width:70px;   /* control size here */
+  height:70px;
+  border-radius:50%;
+  object-fit:contain;  /* important fix */
+  background:white;
+  padding:6px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+  animation:spin 1.5s ease-in-out infinite;
+}
+  
 </script>
 </body>
 </html>
